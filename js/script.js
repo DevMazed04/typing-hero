@@ -15,8 +15,8 @@ let questionText = "";
 fetch("/js/texts.json")
   .then((res) => res.json())
   .then((data) => {
-    //questionText = data[Math.floor(Math.random() * data.length)];
-    questionText = data[Math.floor(Math.random() * data.length)].slice(0, 10);
+    questionText = data[Math.floor(Math.random() * data.length)];
+    //questionText = data[Math.floor(Math.random() * data.length)].slice(0, 10);
     question.innerHTML = questionText;
   });
 
@@ -91,9 +91,6 @@ const gameOver = () => {
   `;
 
   addHistory(questionText, timeTaken, errorCount);
-  console.log("questionText:", questionText);
-  console.log("timeTaken:", timeTaken);
-  console.log("errorCount:", errorCount);
 
   // restart everything
   startTime = null;

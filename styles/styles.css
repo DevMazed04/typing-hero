@@ -30,16 +30,18 @@ body {
       rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+  padding: 50px;
 }
 
 #display {
-  height: 100px;
+  height: 150px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-left: 5rem;
+  /* padding-left: 5rem; */
+  padding: 0 30px;
   color: white;
-  font-size: 32px;
+  font-size: 30px;
   background-color: #171717;
   border: 2px solid #9dffad;
   border-radius: 15px;
@@ -208,13 +210,45 @@ button {
 }
 
 /* ---------------- media queries for small devices ---------------- */
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 280px) and (max-width: 768px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
   }
 
+  #question {
+    padding: 0 18px;
+    font-size: 18px;
+  }
+
+  .green {
+    font-size: 22px;
+  }
+
+  .red {
+    font-size: 22px;
+  }
+
+  #display {
+    padding: 10px;
+    height: 140px;
+    padding-bottom: 20px;
+  }
+
   .card {
     flex-direction: column;
+  }
+}
+
+/* ---------------- media queries for large devices ---------------- */
+@media only screen and (min-width: 769px) {
+  .card {
+    flex-direction: column;
+  }
+
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
   }
 }
