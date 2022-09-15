@@ -15,14 +15,15 @@ let questionText = "";
 fetch("/js/texts.json")
   .then((res) => res.json())
   .then((data) => {
-    questionText = data[Math.floor(Math.random() * data.length)];
-    //questionText = data[Math.floor(Math.random() * data.length)].slice(0, 10);
+    //questionText = data[Math.floor(Math.random() * data.length)];
+    questionText = data[Math.floor(Math.random() * data.length)].slice(0, 10);
     question.innerHTML = questionText;
   });
 
 // checks the user typed character and displays accordingly
-const typeController = (e) => {
-  const newLetter = e.key;
+const typeController = (event) => {
+  const newLetter = event.key;
+  event.preventDefault();
 
   // Handle backspace press
   if (newLetter == "Backspace") {
