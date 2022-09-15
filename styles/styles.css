@@ -194,6 +194,7 @@ button {
 }
 
 .modal-close-btn {
+  margin-top: 30px;
   background: rgb(2, 0, 36);
   background: linear-gradient(90deg,
       rgba(2, 0, 36, 1) 0%,
@@ -209,8 +210,16 @@ button {
       rgba(0, 212, 255, 1) 100%);
 }
 
-/* ---------------- media queries for small devices ---------------- */
-@media only screen and (min-width: 280px) and (max-width: 768px) {
+.finish {
+  margin-bottom: 17px;
+}
+
+.mistake {
+  margin-top: 8px;
+}
+
+/* ------ media queries for mobile devices ------ */
+@media only screen and (min-width: 280px) and (max-width: 575px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
@@ -237,13 +246,29 @@ button {
 
   .card {
     flex-direction: column;
+    gap: 20px;
   }
 }
 
-/* ------ media queries for medium and large devices ------ */
-@media only screen and (min-width: 769px) {
+/* ------ media queries for tablet  devices ------ */
+@media only screen and (min-width: 576px) and (max-width: 991px) {
   .card {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* ------ media queries for large devices ------ */
+@media only screen and (min-width: 992px) {
+  .card {
+    flex-direction: column;
+    gap: 10px;
   }
 
   #histories {

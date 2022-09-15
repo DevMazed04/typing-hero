@@ -16,7 +16,6 @@ fetch("/js/texts.json")
   .then((res) => res.json())
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
-    //questionText = data[Math.floor(Math.random() * data.length)].slice(0, 10);
     question.innerHTML = questionText;
   });
 
@@ -41,7 +40,6 @@ const typeController = (event) => {
   }
 
   userText += newLetter;
-
   const newLetterCorrect = validate(newLetter);
 
   if (newLetterCorrect) {
@@ -84,9 +82,9 @@ const gameOver = () => {
   display.classList.add("inactive");
   // show result
   resultModal.innerHTML += `
-    <h1>Finished!</h1>
+    <h1 class="finish">Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p class="mistake">You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button class="modal-close-btn" onclick="closeModal()">Close</button>
   `;
 
@@ -102,7 +100,7 @@ const gameOver = () => {
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
-  window.top.location = window.top.location;
+  //window.top.location = window.top.location;
 };
 
 const start = () => {
@@ -124,6 +122,7 @@ const start = () => {
 
       clearInterval(startCountdown);
       countdownOverlay.style.display = "none";
+      countdownOverlay.innerHTML = "";
       startTime = new Date().getTime();
     }
     count--;
