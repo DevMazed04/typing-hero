@@ -62,8 +62,8 @@ body {
 
 #result {
   position: fixed;
-  top: 10%;
-  left: 10%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -183,6 +183,31 @@ button {
   top: 0;
 }
 
+#start:hover {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(11, 115, 46, 1) 100%,
+      rgba(0, 212, 255, 1) 100%);
+}
+
+.modal-close-btn {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(187, 5, 51, 1) 100%,
+      rgba(0, 212, 255, 1) 100%);
+}
+
+.modal-close-btn:hover {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(254, 2, 2, 1) 100%,
+      rgba(0, 212, 255, 1) 100%);
+}
+
+/* ---------------- media queries for small devices ---------------- */
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
