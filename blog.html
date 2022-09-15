@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Dev. Mazed's Blog</title>
+   <!-- favicon -->
+   <link rel="shortcut icon" href="icons/devMazed.png" type="image/x-icon" />
+   <!-- bootstrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+   <!-- font awesome -->
+   <script src="https://kit.fontawesome.com/eb9297ad90.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <header class="container">
+      <!-- -------- navbar start -------- -->
+      <nav class="navbar navbar-expand">
+         <div class="container">
+            <a class="navbar-brand text-primary fw-bold" href="blog.html"><span
+                  class="text-white text-bg-primary px-2 py-1 rounded-2">Mazed's</span>
+               Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+               aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link mx-2 bt" href="index.html" title="Typing Hero Site">Typing</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link mx-2 btn" href="blog.html">Blogs</a>
+                  </li>
+               </ul>
+               <span class="navbar-text">
+                  <a class="navbar-brand ms-2 me-0" href="blog.html">
+                     <img src="icons/devMazed.png" alt="Dev Mazed" title="Dev Mazed" width="30" height="32"
+                        class="d-inline-block align-text-top rounded-pill" />
+                  </a>
+               </span>
+            </div>
+         </div>
+      </nav>
+      <!-- -------- navbar end -------- -->
+      <hr class="mt-1 mb-2" />
+   </header>
+
+   <main class="container">
+      <h2 class="fw-semibold text-black opacity-75 text-center px-4 mt-5 mb-4 mb-sm-3">
+         Common JavaScript Questions
+      </h2>
+
+      <!-- ------ blog questions accordion start ------ -->
+      <div class="accordion border border-0 w-accordian mx-auto mt-4 mt-sm-5 my-lg-5 px-4 px-sm-0 px-lg-5"
+         id="accordionExample">
+         <div class="accordion-item border border-0 mb-3">
+            <h2 class="accordion-header" id="headingOne">
+               <button class="accordion-button bg-gradient text-black opacity-75 fw-semibold px-4 py-4 rounded"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                  aria-controls="collapseOne">
+                  1. What is the difference between Local storage and Session
+                  storage?
+               </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+               data-bs-parent="#accordionExample">
+               <div class="accordion-body text-secondary px-0 pe-3 px-lg-4 pb-0 lh-tab">
+                  <p class="lh-lg">
+                     <b>Local storage</b> and <b>Session storage</b> are both ways
+                     for browsers to store key/value pairs for a particular domain
+                     using the Web Storage API. The difference between local storage
+                     and session storage are the following: <br />
+                     <b>a)</b> The storage capacity of local storage is 10MB, Where
+                     the storage capacity of session storage is 5MB. <br />
+                     <b>b)</b> As local storage is not session-based, it must be
+                     deleted via javascript or manually, Where the session storage is
+                     session-based and works per window or tab which means that data
+                     is stored only for the duration of a session, i.e., until the
+                     browser or tab is closed. <br />
+                     <b>c)</b> The local storage data is stored on the browser and
+                     system. Where, the data of session storage is stored on the
+                     browser only. <br />
+                     <b>d)</b> Local storage is useful for storing data that the user
+                     will need to access later, such as offline data. Where, Session
+                     storage is a great way to improve the performance of your web
+                     applications.
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <div class="accordion-item border border-0 mb-3">
+            <h2 class="accordion-header" id="headingTwo">
+               <button
+                  class="accordion-button collapsed bg-gradient text-black opacity-75 fw-semibold px-4 py-4 border border-dark border-opacity-10 rounded"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  2. What is the difference between Global scope and Block scope?
+               </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+               data-bs-parent="#accordionExample">
+               <div class="accordion-body text-secondary px-0 pe-3 px-lg-4 pb-0 lh-tab">
+                  <p class="lh-lg">
+                     In JavaScript, the whole document is <b>Global scope</b> and all
+                     the other functions and variables are contained in this global
+                     scope. The variables defined outside of any function or curly
+                     brackets are known as global variables and have global scope.
+                     Global scope means that the variables can be accessed from any
+                     part of that program, any function or conditional state can
+                     access that variable. <br />
+                     <br />
+                     On the other hand, The <b>Block scope</b> can be defined as the
+                     scope of the variables inside the curly brackets { }, that means
+                     the variables declared inside the curly braces are called as
+                     within block scope. These curly brackets can be of loops, or
+                     conditional statements, or something else. Block scope variables
+                     when declared inside the if or switch conditions or inside for
+                     or while loops, are accessible within that particular condition
+                     or loop.
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <div class="accordion-item border border-0 mb-3">
+            <h2 class="accordion-header" id="headingThree">
+               <button
+                  class="accordion-button collapsed bg-gradient text-black opacity-75 fw-semibold px-4 py-4 border border-dark border-opacity-10 rounded"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                  aria-controls="collapseThree">
+                  3. How does the Event loop works in JavaScript?
+               </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+               data-bs-parent="#accordionExample">
+               <div class="accordion-body text-secondary px-0 pe-3 px-lg-4 pb-0 lh-tab">
+                  <p class="lh-lg">
+                     The <b>Event Loop</b> is the secret behind JavaScript's
+                     asynchronous programming that gives us an illusion of being
+                     multithreaded even though it is single-threaded. It is a
+                     mechanism that allows JavaScript to perform non-blocking
+                     operations. When an asynchronous task is started, the event loop
+                     will start running. Once the task is completed, the event loop
+                     will again check for any other tasks that need to be performed.
+                     The Event Loop has one simple job is to monitor the Call Stack
+                     and the Callback Queue. If the Call Stack is empty, the Event
+                     Loop will take the first event from the queue and will push it
+                     to the Call Stack, which effectively runs it. So the event loop
+                     is something that pulls stuff out of the queue and places it
+                     onto the function execution stack whenever the function stack
+                     becomes empty.
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <div class="accordion-item border border-0 mb-5">
+            <h2 class="accordion-header" id="headingTwo">
+               <button
+                  class="accordion-button collapsed bg-gradient text-black opacity-75 fw-semibold px-4 py-4 border border-dark border-opacity-10 rounded"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  4. When we get undefined in JavaScript?
+               </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+               data-bs-parent="#accordionExample">
+               <div class="accordion-body text-secondary px-0 pe-3 px-lg-4 pb-0 lh-tab">
+                  <p class="lh-lg">
+                     The <b>undefined</b> property indicates that a variable has not
+                     been assigned a value, or not declared at all. It is a primitive
+                     type in JavaScript. So the undefined is a type and the undefined
+                     type has exactly one value that is undefined. JavaScript uses
+                     the undefined value in the following situations: <br />
+                     <b>i)</b> Accessing an uninitialized variable: When you declare
+                     a variable and don't initialize it to a value, the variable will
+                     have a value of undefined. <br />
+                     <b>ii)</b> Accessing a non-existing property of an object: If
+                     you access a non-existing property of an object, you’ll get
+                     undefined
+                     <br />
+                     <b>iii)</b> Function parameters: When you call a function with a
+                     number of parameters, you often pass the same number of
+                     arguments.
+                     <br />
+                     <b>iv)</b> Functions return a value: A function that doesn't
+                     have a return statement implicitly returns undefined. <br />
+                     <b>v)</b> Accessing out-of-bounds array elements: When you
+                     access an array element that is out-of-bounds, you’ll get the
+                     undefined value.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ------ blog questions accordion end ------ -->
+   </main>
+
+   <footer class="text-white text-center bg-dark py- pt-4 pb-2">
+      <div class="mx-auto">
+         <h2 class="text-center fw-semibold mt-sm-3 mt-lg-5 mb-3 pt-lg-4 fs-tab">
+            Dev. Mazed's Blog
+         </h2>
+
+         <div class="text-center mb-2">
+            <div class="fs-5">
+               <a href="https://web.facebook.com/" target="_blank"><i
+                     class="fa-brands fa-facebook text-primary pe-2"></i></a>
+               <a href="https://www.youtube.com/" target="_blank"><i
+                     class="fa-brands fa-youtube text-danger px-2"></i></a>
+               <a href="https://twitter.com/?lang=en" target="_blank"><i
+                     class="fa-brands fa-twitter text-info ps-2"></i></a>
+            </div>
+         </div>
+         <p class="text-center fw-lighter mb-3 mb-sm-2 mb-lg-5">
+            <span>© 2022 ||</span>
+            <a class="text-white text-decoration-none" href="index.html">Dev. Mazed's Blog</a>
+         </p>
+      </div>
+   </footer>
+
+   <!-- scripts -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
