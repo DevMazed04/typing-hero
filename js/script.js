@@ -43,8 +43,10 @@ const typeController = (event) => {
   const newLetterCorrect = validate(newLetter);
 
   if (newLetterCorrect) {
-    display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter
-      }</span>`;
+    display.innerHTML +=
+      `<span class="green">
+        ${newLetter === " " ? "▪" : newLetter}
+      </span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter
       }</span>`;
@@ -67,9 +69,11 @@ const validate = (key) => {
 // FINISHED TYPING
 const gameOver = () => {
   document.removeEventListener("keydown", typeController);
+
   // the current time is the finish time
-  // so total time taken is current time - start time
   const finishTime = new Date().getTime();
+
+  // so total time taken is current time - start time
   const timeTaken = parseInt((finishTime - startTime) / 1000);
 
   // show result modal
@@ -101,6 +105,7 @@ const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
   //window.top.location = window.top.location;
+  window.location.reload();
 };
 
 const start = () => {
